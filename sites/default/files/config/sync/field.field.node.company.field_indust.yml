@@ -1,0 +1,28 @@
+uuid: 6d8a8b2c-e116-4e90-87ac-eafe6adeb52f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_indust
+    - node.type.company
+    - taxonomy.vocabulary.industry
+id: node.company.field_indust
+field_name: field_indust
+entity_type: node
+bundle: company
+label: Industry
+description: 'Add industry that company works in.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      industry: industry
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

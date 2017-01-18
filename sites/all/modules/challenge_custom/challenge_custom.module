@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Implements hook_node_insert().
+ */
+function challenge_custom_node_insert($node) {
+	check_website($node);
+}
+
+function challenge_custom_node_update($node) {
+	check_website($node);
+}
+
+function check_website($node) {
+	$node_type = $node->getType();
+	if (strcmp($node_type, 'Company')) {
+		$nid = $node->id();
+		$field_website = $node->get("field_website")->getValue();
+		if (empty($field_website)) {
+			$edit_link = \Drupal::l(t('click here'), \Drupal\Core\Url::fromRoute('entity.node.edit_form', ['node' => $nid]));
+			drupal_set_message(t('Although website field is not mandatory, it\'s advisable you add one. If you want to add it now @link.', array('@link' => $edit_link)));
+		}
+	}
+}

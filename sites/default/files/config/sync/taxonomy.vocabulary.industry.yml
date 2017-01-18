@@ -1,0 +1,9 @@
+uuid: 5ce9c3b9-ac25-40d1-975d-9f3560936806
+langcode: en
+status: true
+dependencies: {  }
+name: Industry
+vid: industry
+description: 'List of industries currently present on the market'
+hierarchy: 0
+weight: 0

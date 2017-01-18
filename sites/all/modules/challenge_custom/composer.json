@@ -1,0 +1,12 @@
+{
+    "name": "drupal/challenge_custom",
+    "description": "This is a composer.json for challenge_custom module.",
+    "type": "drupal-module",
+	"authors": [
+        {
+            "name": "Tilen Avsec",
+        },
+    ],
+    "license": "GPL-2.0+"
+}
+

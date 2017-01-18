@@ -1,0 +1,9 @@
+name: Challenge Custom Module
+description: Notifies the user if he forgot to add website to Company content type.
+package: Custom
+
+type: module
+core: 8.x
+
+dependencies:
+  - drupal:node
